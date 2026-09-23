@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KWiK Parcelado | LinkedPay</title>
+<meta name="description" content="KWiK Parcelado — compre agora e pague em prestações, integrado no ecossistema LinkedPay.">
+<style>
+:root{
+  --purple:#6d28d9; --purple2:#8b5cf6; --ink:#171321; --muted:#6f6879;
+  --bg:#faf9fc; --card:#fff; --line:#e9e5ef; --soft:#f1edfa;
+}
+*{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+a{text-decoration:none;color:inherit}.wrap{max-width:1180px;margin:auto;padding:0 24px}
+nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:900;font-size:25px;letter-spacing:-1.5px}.logo span{color:var(--purple)}
+.navlinks{display:flex;gap:28px;color:#514b5b;font-size:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border-radius:12px;font-weight:750;font-size:14px;border:1px solid transparent}
+.btn.primary{background:var(--purple);color:white;box-shadow:0 10px 25px #6d28d933}.btn.ghost{border-color:var(--line);background:white}
+.hero{padding:78px 0 90px;background:radial-gradient(circle at 80% 20%,#e9ddff 0,transparent 32%),linear-gradient(135deg,#fff 0%,#f7f3ff 100%)}
+.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.badge{display:inline-flex;padding:7px 11px;border-radius:99px;background:#eee7ff;color:#5b21b6;font-size:12px;font-weight:800;letter-spacing:.3px}
+h1{font-size:clamp(45px,6vw,76px);line-height:1.02;letter-spacing:-4px;margin:18px 0}
+.grad{color:var(--purple)} .lead{font-size:20px;color:var(--muted);max-width:650px}.actions{display:flex;gap:12px;margin-top:28px}
+.phone{background:#171321;border-radius:34px;padding:12px;max-width:360px;margin:auto;box-shadow:0 30px 70px #2d214b38;transform:rotate(2deg)}
+.screen{background:white;border-radius:25px;padding:22px;min-height:560px}
+.apphead{display:flex;justify-content:space-between;align-items:center}.mini{font-size:12px;color:var(--muted)}
+.amount{font-size:36px;font-weight:900;margin:24px 0 4px}.paycard{border:1px solid var(--line);border-radius:18px;padding:17px;margin-top:22px}
+.payrow{display:flex;justify-content:space-between;margin:9px 0}.payrow strong{font-size:18px}.option{padding:14px;border-radius:13px;background:var(--soft);margin-top:10px}.option b{color:var(--purple)}
+section{padding:88px 0}.center{text-align:center}.eyebrow{color:var(--purple);font-size:12px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase}h2{font-size:42px;letter-spacing:-2px;margin:10px 0 14px}.sub{color:var(--muted);max-width:720px;margin:auto}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:42px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:28px;box-shadow:0 10px 35px #24143d08}.icon{width:42px;height:42px;border-radius:12px;background:var(--soft);display:grid;place-items:center;color:var(--purple);font-weight:900}.card h3{margin:18px 0 8px}.card p{color:var(--muted);margin:0}
+.flow{background:#171321;color:white}.flow .sub{color:#bdb6c8}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:42px}.step{border:1px solid #3b3447;border-radius:18px;padding:24px;background:#211c2a}.num{color:#a78bfa;font-weight:900;font-size:13px}.step h3{margin:12px 0 7px}.step p{color:#bdb6c8;font-size:14px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.list{display:grid;gap:12px;margin-top:25px}.list div{padding:14px 16px;background:white;border:1px solid var(--line);border-radius:14px}.list b{color:var(--purple)}
+.eco{display:grid;gap:12px}.ecoItem{padding:22px;border-radius:18px;background:white;border:1px solid var(--line)}.ecoItem strong{font-size:18px}.arrow{color:var(--purple);font-weight:900;margin:0 7px}
+.cta{background:linear-gradient(135deg,#6d28d9,#4c1d95);color:white;border-radius:30px;padding:60px}.cta p{color:#e7dcff}.cta .btn{background:white;color:#4c1d95}
+footer{padding:35px 0;color:#766f80;font-size:13px;border-top:1px solid var(--line)}
+@media(max-width:850px){.navlinks{display:none}.heroGrid,.split{grid-template-columns:1fr}.cards,.steps{grid-template-columns:1fr 1fr}.hero{padding-top:45px}h1{letter-spacing:-2px}.phone{margin-top:15px}}
+@media(max-width:560px){.cards,.steps{grid-template-columns:1fr}.actions{flex-direction:column}.actions .btn{width:100%}section{padding:65px 0}.cta{padding:35px 25px}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap"><nav>
+<div class="logo">linked<span>pay</span></div>
+<div class="navlinks"><a href="#como">Como funciona</a><a href="#beneficios">Benefícios</a><a href="#ecossistema">Ecossistema</a></div>
+<a class="btn primary" href="#contacto">Quero saber mais</a>
+</nav></div>
+</header>
+
+<main>
+<section class="hero">
+<div class="wrap heroGrid">
+<div>
+<span class="badge">NOVA SOLUÇÃO • LINKEDPAY</span>
+<h1>Compre agora.<br><span class="grad">Pague em prestações.</span></h1>
+<p class="lead">KWiK Parcelado transforma o pagamento instantâneo numa experiência simples de pagamento faseado, integrada no ecossistema LinkedPay.</p>
+<div class="actions"><a class="btn primary" href="#como">Descobrir o KWiK Parcelado</a><a class="btn ghost" href="#parceiros">Sou comerciante</a></div>
+</div>
+<div class="phone"><div class="screen">
+<div class="apphead"><b>LinkedPay</b><span class="mini">KWiK</span></div>
+<div class="amount">600.000 Kz</div><span class="mini">Total da compra</span>
+<div class="paycard">
+<div class="payrow"><span>Pagamento inicial</span><strong>100.000 Kz</strong></div>
+<div class="payrow"><span>5 prestações</span><strong>100.000 Kz</strong></div>
+<div class="option"><b>✓ KWiK Parcelado</b><br><span class="mini">Plano disponível para este cliente</span></div>
+</div>
+<a class="btn primary" style="width:100%;margin-top:18px">Continuar</a>
+</div></div>
+</div>
+</section>
+
+<section id="beneficios">
+<div class="wrap center"><div class="eyebrow">Uma nova experiência</div><h2>Pagamento simples. Crédito estruturado.</h2><p class="sub">Uma solução desenhada para ligar clientes, comerciantes e parceiros financeiros numa experiência digital única.</p></div>
+<div class="wrap cards">
+<div class="card"><div class="icon">01</div><h3>Para o cliente</h3><p>Escolha um plano de prestações, acompanhe as datas e pague digitalmente através da LinkedPay.</p></div>
+<div class="card"><div class="icon">02</div><h3>Para o comerciante</h3><p>Venda com uma experiência de checkout moderna e receba segundo o modelo de liquidação acordado.</p></div>
+<div class="card"><div class="icon">03</div><h3>Para o parceiro financeiro</h3><p>Uma camada tecnológica para originação, servicing, cobrança, scoring e acompanhamento da carteira.</p></div>
+</div>
+</section>
+
+<section class="flow" id="como">
+<div class="wrap center"><div class="eyebrow">Como funciona</div><h2>Do checkout à última prestação.</h2><p class="sub">O pagamento e o financiamento podem ser tratados como camadas distintas, permitindo uma arquitectura flexível e controlada.</p></div>
+<div class="wrap steps">
+<div class="step"><span class="num">01 — ESCOLHA</span><h3>Cliente compra</h3><p>Selecciona KWiK Parcelado no checkout.</p></div>
+<div class="step"><span class="num">02 — ANÁLISE</span><h3>Avaliação</h3><p>O motor de risco avalia o pedido segundo as regras definidas.</p></div>
+<div class="step"><span class="num">03 — LIQUIDAÇÃO</span><h3>Comerciante</h3><p>A venda é liquidada de acordo com o modelo financeiro aprovado.</p></div>
+<div class="step"><span class="num">04 — COBRANÇA</span><h3>Prestações</h3><p>O cliente acompanha e paga as prestações através da LinkedPay.</p></div>
+</div>
+</section>
+
+<section id="ecossistema">
+<div class="wrap split">
+<div><div class="eyebrow">Ecossistema LinkedPay</div><h2>Uma plataforma. Várias possibilidades.</h2><p class="sub" style="margin:0">KWiK Parcelado pode conectar-se a diferentes modelos de comércio e financiamento.</p>
+<div class="list">
+<div><b>LinkedPay</b> — pagamentos, experiência digital e infraestrutura.</div>
+<div><b>KWiK</b> — pagamentos instantâneos.</div>
+<div><b>Parceiro financeiro</b> — financiamento, quando aplicável.</div>
+<div><b>TakeNow</b> — gestão de crédito e prestações para determinados produtos.</div>
+<div><b>MobiSmart</b> — exemplo de canal de venda de smartphones.</div>
+</div></div>
+<div class="eco">
+<div class="ecoItem"><strong>MobiSmart</strong><span class="arrow">→</span> vende o equipamento</div>
+<div class="ecoItem"><strong>TakeNow</strong><span class="arrow">→</span> gere aprovação e prestações</div>
+<div class="ecoItem"><strong>LinkedPay</strong><span class="arrow">→</span> processa os pagamentos</div>
+<div class="ecoItem"><strong>KWiK</strong><span class="arrow">→</span> facilita os pagamentos digitais</div>
+<div class="ecoItem"><strong>Cliente</strong><span class="arrow">→</span> paga ao longo do plano</div>
+</div>
+</div>
+</section>
+
+<section id="parceiros">
+<div class="wrap"><div class="cta">
+<div class="eyebrow" style="color:#d9c7ff">Para comerciantes e parceiros</div>
+<h2 style="color:white">Pronto para levar o parcelamento para o seu negócio?</h2>
+<p>Construa uma experiência de pagamento moderna, com tecnologia LinkedPay e uma arquitectura preparada para integração com parceiros financeiros.</p>
+<a class="btn" href="mailto:suporte@linkedpay.co.ao">Falar com a LinkedPay</a>
+</div></div>
+</section>
+
+<section id="contacto" style="padding-top:20px">
+<div class="wrap center"><p class="mini">Produto conceptual — sujeito ao enquadramento regulatório, licenças, contratos e aprovação das entidades competentes aplicáveis em Angola.</p></div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 LinkedPay · KWiK Parcelado · Pagamentos num só clique</div></footer>
+</body>
+</html>
